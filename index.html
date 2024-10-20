@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Photo Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body onload="initGallery()">
+  <header>
+    <h1>My Photo Gallery</h1>
+    <p>Explore my collection of high-quality images ranging from landscapes to portraits.</p>
+  </header>
+  <nav>
+    <button class="filter" onclick="filterGallery('all')">All</button>
+    <button class="filter" onclick="filterGallery('landscapes')">Landscapes</button>
+    <button class="filter" onclick="filterGallery('portraits')">Portraits</button>
+  </nav>
+  <section id="gallery">
+    <!-- Updated images with tabindex -->
+    <div class="photo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnNiDAxJmsJ5Af2eIPkmc5qabYMhCms9FdGw&s" alt="Description of Image 1" tabindex="0">
+      <p class="caption">Majestic Mountains at Dawn</p>
+    </div>
+    <div class="photo">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/92/57/e2/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_3c6301f434fc3dd83524" alt="Description of Image 2" tabindex="0">
+      <p class="caption">City Vibes</p>
+    </div>
+    <div class="photo">
+      <img src="https://static2.bigstockphoto.com/0/6/3/small2/360608551.jpg" alt="Description of Image 3" tabindex="0">
+      <p class="caption">Wisdom in Her Eyes</p>
+    </div>
+    <div class="photo landscapes">
+      <img src="https://i0.wp.com/www.sweetlightphotos.com/wp-content/uploads/2022/08/2022-08-08_Maara-21333-Edit-1.jpg?fit=800%2C533&ssl=1" alt="Description of Image 4" tabindex="0">
+      <p class="caption">Safari Landscapes</p>
+    </div>
+    <div class="photo landscapes">
+      <img src="https://www.usnews.com/object/image/00000162-f3bb-d0d5-a57f-fbfb54aa0000/35-queenstown-new-zealand.jpg?update-time=1677095199297&size=responsive970" alt="Description of Image 5" tabindex="0">
+      <p class="caption">Queenstown: New Zealand</p>
+    </div>
+    <div class="photo portraits">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/220px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" alt="Description of Image 6" tabindex="0">
+      <p class="caption">Mona Lisa</p>
+    </div>
+  </section>
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+</body>
+</html>
